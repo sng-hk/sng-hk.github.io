@@ -25,7 +25,7 @@ url                      : "https://sng-hk.github.io"
 baseurl                  : # the subpath of your site, e.g. "/blog"
 repository               : # GitHub username/repo-name e.g. "mmistakes/minimal-mistakes"
 teaser                   : # path of fallback teaser image, e.g. "/assets/images/500x300.png"
-logo                     : "assets/images/JakeLogo.jpg"
+logo                     : "assets/JakeLogo.jpg"
 masthead_title           : # overrides the website title displayed in the masthead, use " " for no title
 # breadcrumbs            : false # true, false (default)
 words_per_minute         : 200
@@ -95,7 +95,7 @@ analytics:
 # Site Author
 author:
   name             : "Your Name"
-  avatar           : "assets/images/RickBoard.jpg"
+  avatar           : "assets/RickBoard.jpg"
   bio              : "해외 게임 개발자가 되고싶습니다..! 뼈 때리는 피드백은 언제나 사랑입니다.😍😘😊"
   location         : "Republic of Korea"
   email            : "csh09146743@gmail.com"
