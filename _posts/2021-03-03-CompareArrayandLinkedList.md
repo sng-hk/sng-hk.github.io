@@ -1,6 +1,7 @@
 ---
 title : "C#에서 배열, 동적배열, 연결 리스트 생성방법과 비교"
 layout : single
+classes: wide
 ---
 ![img](https://keep.google.com/u/0/media/v2/1VNmVakQlJzgwpcRkjylrAGB7o3y9V16MtrOF999Xr6jvSG1FT5nB6CiZi8SL_-8/1kD787Cd-WAZEFcuGSvAjOdUXAsqnX3kBf-Xs7244pkPVl968cQ-wv56eogFVUOA?accept=image/gif,image/jpeg,image/jpg,image/png,image/webp,audio/aac&sz=1297)
 
