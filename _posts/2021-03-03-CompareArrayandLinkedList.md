@@ -1,5 +1,5 @@
 ---
-title : "C# / 배열, 동적배열, 연결 리스트 생성"
+title : "C# - 배열, 동적배열, 연결 리스트 생성"
 layout : single
 classes: wide
 ---
