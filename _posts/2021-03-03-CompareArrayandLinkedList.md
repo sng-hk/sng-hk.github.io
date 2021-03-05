@@ -1,15 +1,12 @@
 ---
-title : "C#에서 배열, 동적배열, 연결 리스트 생성방법과 비교"
+title : "C# / 배열, 동적배열, 연결 리스트 생성"
 layout : single
 classes: wide
 ---
-![img](https://keep.google.com/u/0/media/v2/1VNmVakQlJzgwpcRkjylrAGB7o3y9V16MtrOF999Xr6jvSG1FT5nB6CiZi8SL_-8/1kD787Cd-WAZEFcuGSvAjOdUXAsqnX3kBf-Xs7244pkPVl968cQ-wv56eogFVUOA?accept=image/gif,image/jpeg,image/jpg,image/png,image/webp,audio/aac&sz=1297)
 
+자료구조는 크게 선형 구조, 비선형 구조로 분류할 수 있다.
 
-
-자료구조는 크게 선형 구조, 비선형 구조로 분류할 수 있다. 파일구조와 단순구조는 추후에 알아본다. 
-
-단순구조는 정수, 실수, 문자, 문자열이 포함된다.
+(파일구조와 단순구조는 추후에 알아본다. 단순구조는 정수, 실수, 문자, 문자열이 포함된다.)
 
 
 
