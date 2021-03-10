@@ -1,5 +1,5 @@
 ---
-title : "Java - 데이터"
+title : "Java - 데이터, 변수, 입력 받아오기, 연산"
 layout : single
 classes: wide
 ---
