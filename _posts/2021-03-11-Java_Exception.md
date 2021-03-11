@@ -16,7 +16,8 @@ classes: wide
 
 ## try - catch - finally 문
 * 구조
-```
+```java
+
 try {
     // 예외 발생 가능성이 있는 실행문
 }
@@ -37,7 +38,7 @@ try 문을 모두 실행하고도 예외가 발생하지 않았을 경우 finall
 안에 있는 무조건 실행되는 명령까지 실행한다.
 
 * 예시  
-```
+```java
 int intArray [] = new int[5];
 try {
     intArray[3] = 10; // 예외 발생하지 않음

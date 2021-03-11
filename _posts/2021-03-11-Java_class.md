@@ -6,7 +6,8 @@ classes: wide
 ## 클래스
 * 기본적인 클래스 구조
 
-```
+```java
+
 public class Knight {
     private int hp; // 필드 : 멤버 변수
     public string name; // 필드 : 멤버 변수
