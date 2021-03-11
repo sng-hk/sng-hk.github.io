@@ -6,7 +6,7 @@ classes: wide
 
 ### 출력함수
 문자열 "Hello" 출력  
-```C
+```
 # include<stdio.h>
 
 main() {
@@ -18,7 +18,7 @@ main() {
 ### 줄바꿈
 `\n`를 넣으면 커서를 다음 줄로 이동시킨다.  
 
-```C
+```
 # include<stdio.h>
 
 main() {
@@ -32,7 +32,7 @@ main() {
 %x	: 십진수 10을 16진(hexa)수 정수형으로 출력  
 %o	: 십진수 10을 8진(octal)수 정수형으로 출력  
   
-```C
+```
 # include<stdio.h>
 
 main() {    
@@ -47,7 +47,7 @@ main() {
 `기억공간의 이름 = 값` 형식으로. 변수를 저장하고  
 추후에 값을 변수를 이용해서 가져올 수 있다.  
 
-```C
+```
 #include <stdio.h>
 
 main() {
@@ -58,7 +58,7 @@ main() {
 
 ```
   
-```C
+```
 #include <stdio.h>
 
 main() {
@@ -68,7 +68,7 @@ main() {
 }
 ```
   
-```C
+```
 #include <stdio.h>
 
 main() {
