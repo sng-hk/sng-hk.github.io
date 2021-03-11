@@ -14,8 +14,8 @@ classes: wide
     \* 배열의 크기보다 큰 인덱스로 배열의 원소를 접근하는 경우  
     \* 정수를 읽는 코드가 실행되고 있을 때 사용자가 문자를 입력한 경우  
 
-## try - catch - finally 문
-* 구조
+## try - catch - finally 문  
+* 구조  
 
 ```java
 
