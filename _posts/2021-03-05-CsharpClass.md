@@ -1,5 +1,5 @@
 ---
-title: C# - class
+title: "C# - class"
 layout: single
 classes: wide
 ---

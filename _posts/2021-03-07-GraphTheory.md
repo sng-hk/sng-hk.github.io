@@ -1,5 +1,5 @@
 ---
-title: C# 자료구조 - 그래프
+title: "C# 자료구조 - 그래프"
 layout: single
 classes: wide
 ---

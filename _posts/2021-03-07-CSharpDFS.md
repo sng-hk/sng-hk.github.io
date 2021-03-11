@@ -1,5 +1,5 @@
 ---
-title: C# 자료구조 - 깊이 우선 탐색 / DFS / Depth First Search
+title: "C# 자료구조 - 깊이 우선 탐색 / DFS / Depth First Search"
 layout: single
 classes: wide
 ---

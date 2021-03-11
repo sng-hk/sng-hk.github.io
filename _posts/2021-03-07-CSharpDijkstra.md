@@ -1,5 +1,5 @@
 ---
-title: C# 자료구조 - 다익스트라 알고리즘 Dijkstra
+title: "C# 자료구조 - 다익스트라 알고리즘 Dijkstra"
 layout: single
 classes: wide
 ---

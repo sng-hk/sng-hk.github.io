@@ -1,6 +1,6 @@
 ---
-layout: single
 title:  "자료구조와 알고리즘 개요"
+layout: single
 classes: wide
 ---
 

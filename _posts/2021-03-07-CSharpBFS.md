@@ -1,5 +1,5 @@
 ---
-title: C# 자료구조 - 너비 우선 탐색 / BFS / Breadth First Search
+title: "C# 자료구조 - 너비 우선 탐색 / BFS / Breadth First Search"
 layout: single
 classes: wide
 ---
