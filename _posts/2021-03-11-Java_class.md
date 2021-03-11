@@ -2,6 +2,7 @@
 title: "Java - 클래스"
 layout: single
 classes: wide
+subtitle : false
 ---
 ## 클래스
 * 기본적인 클래스 구조
