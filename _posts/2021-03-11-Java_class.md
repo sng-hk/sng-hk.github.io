@@ -2,7 +2,6 @@
 title: "Java - 클래스"
 layout: single
 classes: wide
-description : "클래스의 기본적인 사용 방법에 대해서 알아보자"
 ---
 ## 클래스
 * 기본적인 클래스 구조
