@@ -104,8 +104,9 @@ public class Knight {
     private String name;
     private int hp;
     
-    public Knight() { // 생성자
-
+    public Knight(name, hp) { // 생성자
+        this.name = name;
+        this.hp = hp;
     }
 }
 ```
@@ -134,7 +135,7 @@ class Sakak {
         System.out.println("surface = " + Myun);
 	}
 
-    Sakak(int garo, int sero) {
+    Sakak(int garo, int sero) { // 생성자
         this.garo = garo;
         this.sero = sero;
         
@@ -153,8 +154,6 @@ public class JStudy {
 ```
 
 
-
-
 ## this 객체
 
 
@@ -163,8 +162,19 @@ public class JStudy {
 
 ## 클래스 멤버, 인스턴스 멤버
 
-### 인스턴스 멤버
+### 인스턴스 멤버 (non-Static 멤버)
 
-### 클래스 멤버
+### 클래스 멤버 (Static 멤버)
 
+## 접근 지정자
+
+## 클래스 접근 지정자
+
+## 멤버 접근 지정자
+
+## 클래스 상속, 오버라이딩
+
+
+
+---
 **응용 : 싱글톤 패턴**
