@@ -189,6 +189,93 @@ do () {
 ex) 간단한 구구단 프로그램  
 
 
+## 예제
+  
+<문제 1>
+다음과 같은 자료가 있다.
+int mdata[] = {20,30,65,43,12,54};
+
+위 데이터에 대해 다음과 같은 결과가 나오도록 프로그램을 작성하라
+1) 최대값을 출력한다.
+2) 합계를 출력한다.
+3) 평균을 출력한다.
+출력의 모습은 다음과 같이 나오도록 한다.
+
+maximum = 65
+sum = 224
+average = 37.33
+
+<문제 2>
+위 문제를 다 풀어낸 학생은 다음의 내용을 추가로 코딩할 것
+1)  최대값이 몇번째에 놓여있는가를 프로그램적으로 찾아내어 출력하는 코딩을 작성한다.
+2) 40 이상인 값의 갯수를 구하는 프로그램을 작성한다.
+출력의 모습은 다음과 같다.
+
+maximum = 65
+sum = 224
+average = 37.33
+max data = 3
+above 40 => 3
+
+```java
+class Ideone
+{
+	public static void main (String[] args) throws java.lang.Exception
+	{
+		int mdata[] = {20,30,65,43,12,54};
+		int max = mdata[0];
+        int maxIndex = 0;
+		for (int i = 0; i<mdata.length; i++) {
+			if(mdata[i]>=max) {
+				max = mdata[i];
+                maxIndex = i;
+			}
+		}
+		System.out.println("maximum =" + max); // <1> - 1)
+		System.out.println("max data = " + maxIndex); // <2> - 1)
+		int sum = 0;
+		int count = 0;
+		float avr;
+		for (int i = 0; i<mdata.length; i++) {
+			sum += mdata[i];
+			count++;
+		}
+		System.out.println("sum =" + sum); // <1> - 2)
+		
+		
+		avr = (float)sum/count;
+		System.out.println(String.format("average = %.2f", avr)); // <1> - 3)
+		
+		count = 0;
+		for (int i = 0; i<mdata.length; i++) {
+			if(40 <= mdata[i]) {
+				count++;
+			}
+		}
+		System.out.println("above 40 => " + count); // <2> - 2)
+		
+	}
+}
+```
+  
+<문제 3>
+다음의 사이트를 참조. 
+https://biz.chosun.com/site/data/html_dir/2020/08/19/2020081903481.html
+이 기사 중, 다음의 문장
+
+`문재인 정부 출범 후 2017년 8월말 발표된 ‘2017~2021 국가재정운용계획’상 2018년 7.1%까지 올라간 재정지출 증가율은 2019년 5.7%, 2020년 5.2%로 낮아질 계획이었다. 그러나 실제 2019년 재정지출 증가율은 9.5% 수준이었다. 2019년 예산안을 발표하면서 공개한 ‘2018~2022 국가재정운용계획’상 2020년 지출 증가율은 7.3%로 둔화될 계획이었지만, 실제 올해 확정된 지출증가율은 9.1% 수준이었다.`
+
+위 문장에서 "20xx년 y.y%" 를 모두 골라 출력하는 프로그램
+(출력 결과)
+2018년 7.1%
+2019년 5.7%
+2020년 5.2%
+
+```java
+
+
+```
+
 
 ---
 시험 문제 :
