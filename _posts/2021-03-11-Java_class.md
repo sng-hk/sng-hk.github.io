@@ -4,7 +4,50 @@ layout: single
 classes: wide
 ---
 ## 클래스
-* 기본적인 클래스 구조
+
+클래스에 대해 설명하기 전,  
+사각형의 가로, 세로와 면적을 구하는 과정을 살펴보자.  
+
+```java
+public class JStudy {
+	public static void main(String[] args) {
+		int garo[] = new int[2];
+		int sero[] = new int[2];
+		int Myun[] = new int[2];
+		garo[0]=2; sero[0]=3;
+		garo[1]=3; sero[1]=8;
+		
+		Myun[0] = garo[0] * sero[0];
+		Myun[1] = garo[1] * sero[1];
+		
+		System.out.println(Myun[0] + " " + Myun[1]);
+	}
+}
+
+```
+
+### 클래스를 사용하는 이유
+
+관련 있는 자료들을 묶어서 사용할 수 있도록 하기 위함.  
+데이터의 관리가 쉬워진다..!  
+클래스를 사용하면 데이터를 정리해서 사용할 수있다.
+
+예)
+|이름|가로|세로|면적|색깔|
+|---|---|---|---|---|
+|노란네모|3|4|12|노랑|
+|파란세모|5|2|5|파랑|
+
+|이름|나이|키|몸무게|
+|---|---|---|---|
+|형준|18|178|69|
+|지성|29|182|59|
+
+이렇게 관련 있는 자료들끼리 묶어서  
+사용하면 데이터를 손쉽게 관리할 수 있을 것이다.  
+
+  
+### 기본적인 클래스 구조
 
 ```java
 
@@ -25,6 +68,7 @@ public class Knight {
 ```
 
 ## 객체 선언 및 생성, 메서드 호출
+
 ```java
 
 public class Knight {
@@ -54,17 +98,64 @@ class Main
 ```
 
 ## 생성자
-객체 생성 시 객체를 선언하는 필드를 강제적으로 지정해주고 싶을 때 사용.
+객체 생성 시 객체를 선언하는 필드를 강제적으로 지정해주고 싶을 때 사용.  
 ```java
 public class Knight {
+    private String name;
+    private int hp;
+    
     public Knight() { // 생성자
 
     }
 }
 ```
 
+### 기본 생성자
 
-### this 객체
+```java
+    public Knight() { // 기본 생성자
+
+    }
+```
+
+### 생성자 활용
+```java
+class Sakak {
+	int garo;
+	int sero;
+	int Myun;
+	
+	void surface(int garo, int sero) {
+		Myun = garo*sero;
+	}
+	
+	void show() {
+		System.out.println("garo = " + garo + "sero = " + sero);
+        System.out.println("surface = " + Myun);
+	}
+
+    Sakak(int garo, int sero) {
+        this.garo = garo;
+        this.sero = sero;
+        
+        surface(garo,sero);
+        show();
+
+    }
+}
+
+public class JStudy {
+	public static void main(String[] args) {
+		Sakak s = new Sakak(3,2); // garo = 3, sero =2, 면적을 구하고 그 값을 출력.
+	}
+}
+
+```
+
+
+
+
+## this 객체
 
 
 ## 객체 배열
