@@ -7,7 +7,7 @@ classes: wide
 # 조건문
 
 ## if 문
-if() 의 괄호 안 논리값이 참이면 {} 안의 명령 실행.  
+if() 의 괄호 안 논리값이 참이면 {} 안의 명령 실행.
 
 ```java
 if(n<10) {
@@ -218,9 +218,9 @@ max data = 3
 above 40 => 3
 
 ```java
-class Ideone
+class Main
 {
-	public static void main (String[] args) throws java.lang.Exception
+	public static void main (String[] args)
 	{
 		int mdata[] = {20,30,65,43,12,54};
 		int max = mdata[0];
@@ -257,13 +257,14 @@ class Ideone
 	}
 }
 ```
-  
+
+
 <문제 3>
 다음의 사이트를 참조. 
 https://biz.chosun.com/site/data/html_dir/2020/08/19/2020081903481.html
 이 기사 중, 다음의 문장
 
-`문재인 정부 출범 후 2017년 8월말 발표된 ‘2017~2021 국가재정운용계획’상 2018년 7.1%까지 올라간 재정지출 증가율은 2019년 5.7%, 2020년 5.2%로 낮아질 계획이었다. 그러나 실제 2019년 재정지출 증가율은 9.5% 수준이었다. 2019년 예산안을 발표하면서 공개한 ‘2018~2022 국가재정운용계획’상 2020년 지출 증가율은 7.3%로 둔화될 계획이었지만, 실제 올해 확정된 지출증가율은 9.1% 수준이었다.`
+문재인 정부 출범 후 2017년 8월말 발표된 ‘2017~2021 국가재정운용계획’상 2018년 7.1%까지 올라간 재정지출 증가율은 2019년 5.7%, 2020년 5.2%로 낮아질 계획이었다. 그러나 실제 2019년 재정지출 증가율은 9.5% 수준이었다. 2019년 예산안을 발표하면서 공개한 ‘2018~2022 국가재정운용계획’상 2020년 지출 증가율은 7.3%로 둔화될 계획이었지만, 실제 올해 확정된 지출증가율은 9.1% 수준이었다.
 
 위 문장에서 "20xx년 y.y%" 를 모두 골라 출력하는 프로그램
 (출력 결과)
@@ -271,8 +272,33 @@ https://biz.chosun.com/site/data/html_dir/2020/08/19/2020081903481.html
 2019년 5.7%
 2020년 5.2%
 
-```java
+```java		
+public class Main {
 
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		String sentences = "문재인 정부 출범 후 2017년 8월말 발표된 ‘2017~2021 국가재정운용계획’상 2018년 7.1%까지 올라간 재정지출"
+				+ " 증가율은 2019년 5.7%, 2020년 5.2%로 낮아질 계획이었다."
+				+ " 그러나 실제 2019년 재정지출 증가율은 9.5% 수준이었다."
+				+ " 2019년 예산안을 발표하면서 공개한 ‘2018~2022 국가재정운용계획’상 "
+				+ "2020년 지출 증가율은 7.3%로 둔화될 계획이었지만,"
+				+ " 실제 올해 확정된 지출증가율은 9.1% 수준이었다.";	
+		int indexOfPercent;
+		String[] resultArr = new String[6];							
+		for (int i = 0; i < resultArr.length; i++) {			
+			indexOfPercent = sentences.indexOf("%");
+			resultArr[i] = sentences.substring(indexOfPercent-9,indexOfPercent+1);
+			sentences = sentences.substring(indexOfPercent + 2);
+			
+			if (!(resultArr[i].contains("20") && resultArr[i].contains("년"))) {
+				continue;
+			}
+			System.out.println(resultArr[i]);
+	
+		}
+	}	
+		
+}		
 
 ```
 
