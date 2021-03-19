@@ -108,17 +108,19 @@ class Main
 * 증감 연산자  
     count++; // count를 사용한 후 명령이 끝나면 count 값을 1 증가  
     ++count; // count 값을 1 증가한 후에 count를 사용.  
+
 * 대입 연산자  
     연산의 오른쪽 결과를 왼쪽 변수에 대입.  
     연산 우선순위가 가장 낮음. 제일 늦게 함!  
+
 * 논리 연산자  
-    두 개의 논리값에 논리 연산.  
-```
-!a // a 가 true 이면 false를 나타냄.
-a^b // a,b 의 exclusive-OR 연산. 같은 논리값이면 1, 다른 논리값이면 false.
-a||b // a,b 의 OR 연산. 모두 false인 경우에만 false.
-a&&b // a,b 의 and 연산. 모두 true인 경우에만 true.
-```
-  
-* 비교 연산자  
+    두 개의 논리값에 논리 연산. boolean 값. (C언어에서는 true 대신 1, false 대신 0)
+    |논리 연산자|설명|
+    |---|---|
+    |!a|a 가 true 이면 false를 나타냄.|
+    |a^b|a,b 의 exclusive-OR 연산. 같은 논리값이면 1, 다른 논리값이면 false.|
+    |a\|\|b|a,b 의 OR 연산. 모두 false인 경우에만 false.|
+    |a&&b|a,b 의 AND 연산. 모두 true인 경우에만 true.|
+
+* 비교 연산자 
     두 개의 값을 비교하여 true/false 결과  
