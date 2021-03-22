@@ -60,7 +60,7 @@ classes: wide
 
 ---
 
-## 1. 단말장치 DTE  
+## 1. 단말장치 DTE  (Data Terminal Equipment)
 디지털 데이터를 입출력하는데 사용하는 장치 
 키보드, 모니터, 프린터 등 컴퓨터와 연결되는 모든 주변 장치.
 = 단말기
@@ -68,7 +68,7 @@ classes: wide
 
 ---
 
-## 2. 신호변환장치 DCE  
+## 2. 신호변환장치 DCE  (Data Communications Equipment)
 송신자의 정보를 전기적 신호로 변환 후 전송매체(통신회선)을 거쳐 전송  
 전기적 신호는 수신자의 신호 변환장치를 이용해 원래의 정보로 변환  
 ex. Modem ( Modulator Demodulator ), 전화기, Codec, Digital Service Unit  
