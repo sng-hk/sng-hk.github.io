@@ -199,8 +199,24 @@ public class JStudy {
 
 ```
 
+
+
 ## this 키워드
-현재 접근한 객체 자기 자신에 대한 레퍼런스를 말한다.
+
+this.변수; // 현재 접근한 객체 자기 자신의 변수를 
+```java
+class Sakak {
+	int _garo;
+	int _sero;
+	int _Myun;
+
+	Sakak(int garo, int sero) {
+		_garo = garo;
+		_sero = sero;		
+	}
+}
+```
+객체가 갖는 필드를 set 하고, get 하는 방법으로 
 
 ## 객체 배열
 객체 배열을 선언하고 생성하는 방법은 기본적으로는
@@ -277,22 +293,40 @@ static 메소드는 객체 없이도 사용 가능하므로, this 레퍼런스 �
 ## 클래스 상속, 오버라이딩
 (다형성 : )  
 기존의 클래스를 수정하는데 있어서 위험성을 가진다.  
-수정할 클래스를 상속하는 새로운 클래스를 만들어서 수정한다.  
+현재는 코드가 짧아서 수정하는데 위험 부담이 없지만,
+코드의 크기가 커질수록 조그마한 부분이라도 잘못 건드리면 프로그램에 문제가 생길 수도 있다.
+따라서, 수정할 클래스를 상속하는 새로운 클래스를 만들어서 수정하여 기존의 원본 클래스는 그대로 두고,
+상속 받은 클래스를 수정해서 안전하게 코드를 수정할 수 있다.
 
 ```java
-
 class MySakak extends Sakak {
-    
+	MySakak(int garo, int sero) {
+		super(garo, sero);
+	}
+	void show() {
+		System.out.println("garo => " + garo + " sero => " + sero);
+		surface(garo,sero);
+        System.out.println("surface => " + Myun);
+	}
 }
 
+public class MyJava {
+	public static void main(String[] args) {
+		MySakak s = new MySakak(3,4);		
+	}
+}
 ```
-  
-### 부모 생성자 불러오기  
-super() 메서드  
+**결과**  
+```
+garo => 3 sero => 4
+surface => 12
+```
+	
+### 부모 생성자 불러오기 : super() 메서드
 인자를 갖는 부모 클래스 생성자를 지정해서 불러올 때 사용.  
 자식 클래스를 생성할 떄, 그 생성자에 해당하는 부모 생성자를 먼저 호출한 후,  
 자식 클래스 생성자를 호출한다.  
 
 
 ---
-**응용 : 싱글톤 패턴**  
+**응용 : 디자인 패턴**  
