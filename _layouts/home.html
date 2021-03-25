@@ -18,5 +18,10 @@ layout: archive
     {% include archive-single.html type=entries_layout %}
   {% endfor %}
 </div>
-
 {% include paginator.html %}
+
+<div class="col-lg-4 col-md-2">
+  {% for category in categories %}
+    {{ category }}
+  {% endfor %}
+</div>
