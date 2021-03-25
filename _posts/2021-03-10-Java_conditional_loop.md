@@ -119,9 +119,12 @@ sum += 100;
 반복되는 명령을 쉽게 처리할 수 있다..!  
 
 * for 문 구조  
+
+```
 for(초기값; 실행조건; 증감값) {  
     // 실행할 명령  
 }  
+```
   
 증감값은 {} 안의 실행할 명령이 끝나고서 가장 나중에 실행된다.  
   
@@ -149,6 +152,31 @@ for (int i = 0; i<n; i++) {
 `i=2` 이므로 실행조건 `i<n` 을 만족하지 않는다.  
 따라서 {} 안의 명령을 실행하지 않고 for문을 마친다.  
 
+예제) 
+21, 18, 15, ..., 6,3 을 한 줄단 숫자 하나씩 출력하는 프로그램 만들기.  
+  
+방법 1)  
+```java
+public class Main {
+	public static void main(String[] args) {
+		for(int i=7; i>0;i--) {
+			int result = i*3;
+			System.out.println(result);
+		}
+	}
+}
+```
+  
+방법 2)  
+```java
+public class Main {
+	public static void main(String[] args) {
+		for(int i=21; i>0;i-=3) {
+			System.out.println(i);
+		}
+	}
+}
+```
 
 ### continue  
 반복문의 현재 부분만 탈출하고 다음 반복문으로 넘어간다.  
