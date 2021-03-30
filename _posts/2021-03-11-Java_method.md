@@ -2,7 +2,7 @@
 title: "Java - 메서드"
 layout: single
 classes: wide
-tags: [java]
+tags: [Java]
 ---
 
 ## 메서드  

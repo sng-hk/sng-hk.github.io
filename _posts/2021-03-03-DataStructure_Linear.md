@@ -2,6 +2,7 @@
 title : "C# - 선형 자료구조"
 layout : single
 classes: wide
+tags : [자료구조]
 ---
 
 ## 자료구조의 분류
