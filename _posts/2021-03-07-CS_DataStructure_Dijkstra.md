@@ -2,7 +2,7 @@
 title: "C# 자료구조 - 다익스트라 알고리즘 Dijkstra"
 layout: single
 classes: wide
-tags : [C#]
+tags : [C#, 자료구조]
 ---
 
 MMORPG 에서는 길찾기를 구현하는 것이 매우 중요하다. 특히 몬스터들이 플레이어를 향해서 길찾기를 하여 다가가야하기때문이다.
