@@ -2,7 +2,7 @@
 title : "Java - 예외 처리"
 layout : single
 classes: wide
-tags: [java]
+tags: [Java]
 ---
 
 ## 예외 처리  

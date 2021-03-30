@@ -2,6 +2,7 @@
 title: "C# - Porperty 프로퍼티"
 layout: single
 classes: wide
+tags : [C#]
 ---
 
 객체지향에서 은닉성을 보장하기 위해서 C#에서는 protected, private 등과 같은 키워드로 변수의 값을 외부에서 지정하는 것을 막도록한다. 그리고 변수에 대한 getters 와 setters를 작성하여 외부에서 함수를 이용해야만 변수 값을 지정해줄 수 있도록한다. 하지만, 클래스 내에서 갖는 변수의 개수가 많아지면 많아질수록 getters 와 setters의 양도 많아질 것이다. 이를 쉽게 해결하기 위해 C#에선느 프로퍼티라는 기능을 제공한다.

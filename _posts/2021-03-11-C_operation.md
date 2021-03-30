@@ -2,7 +2,7 @@
 title: "C - 연산자"
 layout: single
 classes: wide
-tags: [cLanguage]
+tags: [C언어]
 ---
 
 ### 산술 연산

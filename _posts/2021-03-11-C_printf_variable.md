@@ -2,7 +2,7 @@
 title: "C - 출력함수, 변수"
 layout: single
 classes: wide
-tags: [cLanguage]
+tags: [C언어]
 ---
 
 ### 출력함수

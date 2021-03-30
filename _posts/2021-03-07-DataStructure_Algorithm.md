@@ -2,6 +2,7 @@
 title:  "자료구조와 알고리즘 개요"
 layout: single
 classes: wide
+tags : [자료구조]
 ---
 
 ## 자료구조  

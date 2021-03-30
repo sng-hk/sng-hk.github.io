@@ -2,7 +2,7 @@
 title: "Java - 클래스"
 layout: single
 classes: wide
-tags: [java]
+tags: [Java]
 ---
 ## 클래스
 

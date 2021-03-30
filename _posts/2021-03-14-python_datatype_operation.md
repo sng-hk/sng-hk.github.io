@@ -2,7 +2,7 @@
 title: "Python - 숫자 데이터 타입, 연산"
 layout: single
 classes: wide
-tags : [python]
+tags : [Python]
 ---
 
 ## 숫자 데이터 타입

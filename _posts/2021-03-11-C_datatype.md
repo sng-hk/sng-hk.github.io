@@ -2,6 +2,7 @@
 title: "C - 데이터형(정수형, 실수형, 문자형), 오버플로우"
 layout: single
 classes: wide
+tags : [C언어]
 ---
 
 ## 정수형

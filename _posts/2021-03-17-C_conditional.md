@@ -2,7 +2,7 @@
 title: "C - 조건문"
 layout: single
 classes: wide
-tags: [cLanguage]
+tags: [C언어]
 ---
   
 구조적 프로그래밍 기법 4가지 요소  
