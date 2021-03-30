@@ -6,11 +6,11 @@ layout: archive
 https://wormwlrm.github.io/2019/09/22/How-to-add-tags-on-Jekyll.html
  -->
  {% if page.tags %}
- {% for tag in page.tags %}
-   {% if site.data.tags contains tag %}
-     <span class="tag">{{ tag }}</span>
-   {% endif %}
- {% endfor %}
+  {% for tag in page.tags %}
+    {% if site.data.tags contains tag %}
+      <span class="tag">{{ site.data.format[tag] }}</span>
+    {% endif %}
+  {% endfor %}
 {% endif %}
 
 {{ content }}
