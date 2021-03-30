@@ -2,7 +2,7 @@
 title: "데이터 통신 - 정보 처리 시스템"
 layout: single
 classes: wide
-tags : [datacommunication]
+tags : [데이터 통신]
 ---
   
 **주요 내용**  

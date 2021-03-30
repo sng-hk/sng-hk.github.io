@@ -2,7 +2,7 @@
 title: "데이터 통신 - 정보전송 방식과 기술(2/2)"
 layout: single
 classes: wide
-tags : [datacommunication]
+tags : [데이터 통신]
 ---
 ## 3. 정보 전송 방식
   

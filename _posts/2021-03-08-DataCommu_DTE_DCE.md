@@ -2,6 +2,7 @@
 title: "데이터 통신 - 정보 통신 시스템"
 layout: single
 classes: wide
+tags : [데이터 통신]
 ---
 
 이번주 수업의 주요 내용
