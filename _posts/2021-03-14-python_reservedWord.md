@@ -2,6 +2,7 @@
 title: "Python - 예약어"
 layout: single
 classes: wide
+tags : [python]
 ---
 
 ```python

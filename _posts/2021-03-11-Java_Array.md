@@ -2,6 +2,7 @@
 title : "Java - 배열"
 layout : single
 classes: wide
+tags: [java]
 ---
 
 ## 배열  

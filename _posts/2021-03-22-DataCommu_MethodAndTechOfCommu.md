@@ -2,6 +2,7 @@
 title: "데이터 통신 - 정보전송 방식과 기술(1/2)"
 layout: single
 classes: wide
+tags : [datacommunication]
 ---
   
 **지난수업 :**  
