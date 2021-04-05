@@ -371,7 +371,7 @@ N-SDU에 N-PCI를 추가하여 N-PDU를 만듦. (N+1)-PDU는 N-SDU와 같다.
 데이터에 구문과 의미가 포함. 절차에 타이밍 포함.  
   
 ---
-
-시험 예상 문제)
-OSI 7 layer 레퍼런스 모델을 그리고 각 계층의 기능을 설명해라
-(Go back N ARQ와 Selective ARQ 비교하며 이해)
+  
+시험 예상 문제)  
+OSI 7 layer 레퍼런스 모델을 그리고 각 계층의 기능을 설명해라  
+(Go back N ARQ와 Selective ARQ 비교하며 이해)  
