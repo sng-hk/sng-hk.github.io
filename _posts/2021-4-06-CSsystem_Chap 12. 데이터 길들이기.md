@@ -1,3 +1,10 @@
+---
+title: "CHAPTER 12. 데이터 길들이기"
+layout: single
+classes: wide
+tags : [Python]
+---
+
 # CHAPTER 12. 데이터 길들이기  
   
 지금까지 파이썬 언어 자체(데이터 타입, 코드 구조, 구문 등)만 다뤘다. 2부부터는 실제 문제 적용을 다룰 것이다.    
