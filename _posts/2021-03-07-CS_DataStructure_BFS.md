@@ -2,7 +2,7 @@
 title: "C# 자료구조 - 너비 우선 탐색 / BFS / Breadth First Search"
 layout: single
 classes: wide
-tags : [C#, 자료구조]
+tags : [자료구조]
 ---
 
 1) 현재 노드로부터 연결된 노드들 중 방문하지 않은 노드들을 큐에 넣는다.

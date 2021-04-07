@@ -2,7 +2,7 @@
 title:  "Java 자료구조 - 자료구조와 알고리즘 개요"
 layout: single
 classes: wide
-tags : [Java, 자료구조]
+tags : [자료구조]
 ---
 
 **프로그램 = 자료구조 + 알고리즘**

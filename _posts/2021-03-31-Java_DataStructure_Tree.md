@@ -2,7 +2,7 @@
 title:  "Java 자료구조 - 트리"
 layout: single
 classes: wide
-tags : [Java, 자료구조]
+tags : [자료구조]
 ---
 
 **배열이나 연결리스트 :**

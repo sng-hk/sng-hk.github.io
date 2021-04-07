@@ -2,7 +2,7 @@
 title: "C# 자료구조 - 그래프"
 layout: single
 classes: wide
-tags : [C#, 자료구조]
+tags : [자료구조]
 ---
 
 자료구조에서의 그래프

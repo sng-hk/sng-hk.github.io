@@ -2,7 +2,7 @@
 title:  "Java 자료구조 - 스택과 큐"
 layout: single
 classes: wide
-tags : [Java, 자료구조]
+tags : [자료구조]
 ---
 ## 스택
 
