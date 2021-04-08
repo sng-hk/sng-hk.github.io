@@ -161,6 +161,88 @@ peek() 메서드는 인덱스를 이용하여 배열 원소를 직접 접근.
 
 배열의 크기를 확대 또는 축소시키는 것도 최악의 경우에는 O(N) 시간.
 
+## 연결 리스트 Linked List
+* **단순 연결 리스트**
+* **이중 연결 리스트**
+* **원형 연결 리스트**
+
+## 단순 연결 리스트 클래스 구현
+
+### 단순 연결리스트의 노드를 위한 Node 클래스
+
+```java
+public class Node <E> {
+    private E item; // 노드가 갖고 있는 실제 데이터 값.
+    private Node<E> next; // 다음 요소를 가리키는 인스턴스를 지닌다.
+    public Node(E newItem, Node<E> node) { // 생성자
+        item = newItem;
+        next = node;
+    }
+
+    // get set 메서드
+    public E getItem() {
+        return item();
+    }
+    public Node<E> getNext() {
+        return next;
+    }
+    public void setItem(E newItem) {
+        item = newItem
+    }
+    public void setNext(Node<E> newNext) {
+        next = newNext;
+    }
+}
+
+```
+### 리스트를 단순연결리스트로 구현한 SList 클래스
+```java
+import java.util.noSuchElementException;
+public class SList <E> {
+    protected Node head; // 연결리스트의 첫 노드를 가리킴
+    // head는 item을 갖고 있지 않기 때문에 제네릭으로 선언할 필요 없음.
+    private int size;
+    public SList() { // 연결 리스트 생성자.
+        head = null;
+        size = 0;
+    }
+    // 탐색, 십입, 삭제 연산을 위한 메서드 선언
+}
+```
+
+### 탐색 search() 메서드
+탐색은 인자로 주어지는 target 을 찾을 때까지 연결리스트의 노드들을
+첫 노드부터 차레로 탐색
+
+```java 
+public int search(E target) { // target을 탐색
+    Node p = head; 
+    for ( int k=0;k<size;k++) {
+        if (target == p.getItem()) {
+            return k; // head는 null이기 때문에 head가 가리키는 첫번째 레퍼런스부터가 찐(?) 탐색
+            p = p.getNext();
+        }
+    }
+    return -1;
+}
+```
+
+### 맨 앞에 삽입 insertFront() 메서드
+
+```java
+public void insertFront(E newItem) { // 연결리스트 맨 앞에 새 노드 삽입
+    head = new Node(newItem, head);
+    // head (SList 인스턴스가 갖는 head의 원래 노드 필드가 새로운 노드를 가리키도록 하고,
+    // head =        
+    size++;
+}
+```
+
+
+
+
 ---
 
 매 챕터마다 그 자료구조 타입에 시행을 시키게 되면 시간이 얼마나 걸리는지 체크할 것.
+
+
