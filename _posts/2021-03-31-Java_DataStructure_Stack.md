@@ -226,6 +226,34 @@ public class ListStack <E> {
         top = null;
         size = 0;
     }
+    public int size() {return size;}
+    public boolean isEmpty() {
+        return size == 0;
+        }
+    }
+
+    public E peek() {
+        if (isEmpty()) {
+            throw new EmptyStackException();
+        }
+        return top.getItem();
+    }
+
+    public void push(E newItem) {
+        Node newNode = newNode(newItem, top);
+        top = newNode;
+        size++;
+    }
+
+    public E pop() {
+        if (isEmpty()) {
+            throw new EmptyStackException();
+        }
+        E topItem = top.getItem();
+        top = top.getNext();
+        size--;
+        return topItem;
+    }
 }
 
 ```
@@ -245,6 +273,9 @@ public class ListStack <E> {
 
 ### 큐의 활용 예시
 
+**너비 우선 탐색**
+너비 우선 탐색은 맹목적 탐색방법의 하나로 시작 정점을 방문한 후 시작 정점에 인접한 모든 정점들을 우선 방문하는 방법이다. 더 이상 방문하지 않은 정점이 없을 때까지 방문하지 않은 모든 정점들에 대해서도 너비 우선 검색을 적용한다.
+
 **BFS 너비 우선 탐색 구현**
 1) 현재 노드로부터 연결된 노드들 중 방문하지 않은 노드들을 큐에 넣는다.
 2) 큐에서 가장 나중에 들어간 노드를 큐에서 빼내고 해당 노드를 방문한다.
@@ -253,6 +284,35 @@ public class ListStack <E> {
 큐를 이용하여 코드로 구현한다.
 특정한 상황, 간선이 가중치가 없는 그래프일 경우에만 적용될 수 있다.
 즉, 노드에서 다른 노드로 가는 비용이 모든 간선에서 동일하지 않을경우에는 사용할 수 없다.
+
+![image](https://user-images.githubusercontent.com/61813239/114730221-a2a20f00-9d7b-11eb-8939-3906a7c8be3e.png)
+
+위 그림에서 너비 우선 탐색 과정은 다음과 같다.
+1)
+1을 큐에 넣는다.
+2)
+1을 큐에서 빼낸 후, 1에 방문한다.
+3)
+2, 3을 큐에 넣는다.
+4)
+2를 큐에서 빼낸 후, 2를 방문한다.
+5)
+4, 5를 큐에 넣는다.
+6)
+3을 큐에서 빼낸 후, 3을 방문한다.
+7)
+6,7을 큐에 넣는다.
+8)
+4를 큐에서 뺀다.
+9)
+5를 큐에서 뺀다.
+10)
+6을 큐에서 뺀다.
+11)
+7을 큐에서 뺀다.
+
+결과적으로
+1-2-3-4-5-6-7 순서로 노드를 방문한다.
 
 ### 큐를 구현하기
 
@@ -272,26 +332,28 @@ public class ListStack <E> {
 **방법 2)**
 배열을 원형으로, 즉, 배열의마지막 원소가 첫 원소와 맞닿아 있다고 여김
 
-새 itm 삽입 후
+![image](https://user-images.githubusercontent.com/61813239/114725236-4dfc9500-9d77-11eb-9749-2ccb9556fe2e.png)
+
+
+새 item 삽입 후
 
 배열의 앞뒤가 맞닿아 있다고 생각하기 위해
 배열의 rear 다음의 비어있는 원소의 인덱스(rear)는
 다음과 같이 표현할 수 있다.
 
-mod()를 이용.
-
 rear = (rear + 1) % N
 
+N으로 나누었을 때 나오는 나머지 값을 인덱스로 설정한다.
 여기서 N은 배열의 크기이다.
 
-Ex) if rear == 5, (5+1) / 6 = 0 번지로 전환
+Ex) 만약 rear == 5, (5+1) % 6 = 0 번지로 전환
 
 **큐가 empty일 때 문제 해결 방안**
 
 방법 1)
 item을 삭제할 때마다 큐가 empty가 되는지 검사하고,
 만일 empty가 되면, front = rear = 0 을 만든다.
-삭제할 때마다 empty 조건을 검사하는 것은 프로그램 수행의 효율성이 저하됨
+삭제할 때마다 isEmpty 조건을 검사하는 것은 프로그램 수행의 효율성이 저하됨
 시간이 많이 걸림.
 
 
@@ -302,20 +364,33 @@ front를 실제의 가장 앞에 이는 item의 바로 앞의 비어있는 원�
 1개는 항상 비워둔다.
 Empty 가 되면, front 와 rear 가 같게 둠.
 
+방법 2의 의도:
+rear 와 front 의 값이 같다면,
+그 큐는 비어있다고 판단할 수 있고,
+
+rear + 1 과 front 의 값이 같다면,
+그 큐는 꽉 찼다고 판단할 수 있다.
+
 ## 큐를 배열로 구현한 ArrayQueue 클래스
 
 변수는 어떤 것들을 설정해야할지.
-front : 
-rear : 
+front : 큐에 담긴 노드 중 가장 나중에 담긴 요소의 인덱스를 가리킨다.
+rear : 큐에 담긴 노드 중 가장 최근에 담긴 요소의 인덱스를 가리킨다.
 size : 큐에 담긴 항목의 수. 배열의 수와 비교하기 위함.
 
 Arrayqueue() // 생성자
 front, rear, size 모두 0으로 초기화.
 큐의 처음 크기는 2로 초기화.
+```java
+
+```
+
 
 size() 메서드 // 큐에 있는 항목의 수를 리턴
 isEmpty() 메서드 // 큐가 empty이면 true 리턴
+```java
 
+```
 위 세가지는 기본적으로 갖고 있다.
 
 add(), remove(), resize()
@@ -345,7 +420,7 @@ item을 제거.
 
 ```java
 public E remove() {
-    if (isEmpt()) throw new NoSuchElementException(); // underflow
+    if (isEmpty()) throw new NoSuchElementException(); // underflow
     front = (front+1) % q.length;
     E item = q[front];
     size--;
@@ -382,19 +457,6 @@ remove() 메서드 :
 
 sort까지 4가지
 
-### 큐 자료구조의 응용
-순서대로 작업을 처리해야할 때 사용.
-
-CPU 태스크 스케줄링 :
-사용자가 먼저 해달라고 한 것부터 처리.
-
-네트워크 프린터 :
-단말이 여러대 연결된 프린터에서 먼저 요청받은 것부터 출력, 순서대로 기억해둠.
-
-이진트리의 레벨순서 순회
-
-그래프에서의 너비우선탐색
-
 
 ### 수행 시간
 - 배열로 구현한 큐의 add메서드나 remove 메서드는 수행시간이 O(1)이다.
@@ -409,8 +471,6 @@ O(N) 시간이 소요.
 데크(Double- ended Queue, Deque) : 양쪽 끝에서 삽입, 삭제를 허용하는 자료구조.
 스택과 큐 자료구조를 혼합
 데큐는 이중 연결리스트로 구현하는게 일반적.
-
-데큐는 기억만 하고있자. 스택 큐 위주로.
 
 ## 요약
 스택은 한 쪽 끝에서만 item을 삭제하거나 새로운 item을 저장하는
