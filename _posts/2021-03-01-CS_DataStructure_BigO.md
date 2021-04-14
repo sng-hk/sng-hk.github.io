@@ -2,7 +2,7 @@
 title:  "C# - Big-O 표기법, 알고리즘 성능,척도"
 layout: single
 classes: wide
-tags : [C#, 자료구조]
+tags : [자료구조]
 ---
 
 ```
