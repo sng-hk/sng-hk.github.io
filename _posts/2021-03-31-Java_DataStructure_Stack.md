@@ -14,7 +14,7 @@ tags : [자료구조]
 
 스택은 실생활에서 접시 그릇을 차곡차곡 쌓아둔 모습에 비유할 수 있다.
 
-[!스택 예시](/assets/images/stackEx.jpg)
+![image](https://user-images.githubusercontent.com/61813239/114713814-7632c680-9d6c-11eb-9e26-d36e2192eb6c.png)
 
 ### 스택의 활용 예시
 
@@ -27,29 +27,54 @@ CPU 안에 스택을 두어 이용해서 폰노이만 병목에서
 
 스택을 활용한 함수의 중첩 호출과정을 살펴보자.
 
-[!스택 함수 중첩호출 과정](/assets/images/)
+![image](https://user-images.githubusercontent.com/61813239/114714212-d88bc700-9d6c-11eb-93d9-7fb6aa715d8a.png)  
+  
 
-cal proc1
-스택의 최상위에는 proc2를 호출하는 명령어(cal proc1) 다음으로 실행할 명령어의 위치를 담는다.
+```
+class Main {
+    static void main(String[] args) {
+        A();
+        D();
+    }
 
-cal proc2
-proc1에서는 proc2를 호출한다.
-따라서 스택의 최상위에는 proc2를 호출하는 명령어 다음으로 오는 명령어의 위치를 담는다.
+    static void A() {
+        B();
+        ...
+    }
 
-ret
-proc2 실행을 모두 마치고 스택 최상위에 담겨있던 proc1에서 proc2를 호출한 부분 다음으로 오는
-명령어를 실행하기 시작한다.
+    static void B() {
+        C();
+        ...
+    }
 
-ret
-proc1의 호출이 끝났으므로, 스택 최상위에 담겨있는 proc1을 호출하는 명령어 다음에 오는 명령어를 실행한다.
+    static void C() {
+        ...
+    }
 
-[!스택 함수 중첩호출 과정2](/assets/images/)
+    static void D() {
+        ...
+    }
+}
+```
+
+A() 호출
+스택의 최상위에는 B()를 호출하는 명령어(A() call) 다음으로 실행할 명령어의 위치를 담는다.
+
+B() 호출
+A() 에서는 B()를 호출한다.
+따라서 스택의 최상위에는 B()를 호출하는 명령어 다음으로 오는 명령어의 위치를 담는다.
+
+B() return
+B() 실행을 모두 마치고 복귀할 때에는 스택 최상위에 담겨있던 A()에서 B()를 호출한 부분 다음으로 오는 명령어를 실행한다.
+
+A() return
+A()의 호출이 끝났으므로, 스택 최상위에 담겨있는 A()를 호출하는 명령어 다음에 오는 명령어를 실행한다.
 
 * **후위 표기법**
 
 연산자를 피연산자 뒤에 표기하는 방법 예) AB+
 중위표기법의 수식을 후위표기법으로 변환하는 방법을 알아보자.
-수식 A*B-C/D를 후위 표기법으로 변환하면,
+수식 A\*B-C/D를 후위 표기법으로 변환하면,
 1\) 수식의 각 연산자에 대해서 우선순위에 따라 괄호를 사용하여 다시 표현한다.
 ((A*B)-(C/D)
 
@@ -59,15 +84,16 @@ proc1의 호출이 끝났으므로, 스택 최상위에 담겨있는 proc1을 �
 ((AB)*(CD)/)-
 ```
 
-3\) 괄호를 제거한다..
+3\) 괄호를 제거한다.
 ```
 AB*CD/-
 ```
 
-우리가 일반적으로 사용하는 표기법은 중위 표기법`(A\*B-C/D)`이지만,
-컴퓨터 내부에서 수식을 처리하기에 가장 효율적인 방법은 후위 표기법이다.
+우리가 일반적으로 사용하는 표기법은 **중위 표기법**`(A*B-C/D)`이지만,
+컴퓨터 내부에서 수식을 처리하기에 가장 효율적인 방법은 **후위 표기법**이다.
 후위 표기법을 사용하면 괄호나 연산자 우선순위를 따로 처리하지 않고
 왼쪽에서 오른쪽으로 표기된 순서대로 처리할 수 있다.
+
 우리가 컴퓨터에 중위 표기법 형태의 수식을 입력하면 컴퓨터 내부에서는
 효율적인 처리를 위해 스택을 사용하여 입력된 수식을 후위 표기법으로 변환하게 된다.
 
@@ -75,14 +101,134 @@ AB*CD/-
 스택을 사용하여 수식을 계산하는 방법은,
 
 1\) 피연산자를 만나면 스택에 삽입한다.
-2\) 연산자를 만나면 필요한 만큼의 피연산자를 스택에서 pop하여 연산하고,
+2\) 연산자를 만나면 필요한 만큼의 피연산자를 스택에서 pop하여 연산하고
 3\) 연산 결과를 다시 스택에 삽입한다.
 4\) 수식이 끝나면, 마지막으로 스택을 pop하여 출력한다.
+  
+**실행과정**
+```
+// 피연산자를 만나면 스택에 삽입한다.
+push A
+push B
 
+// 연산자를 만나면 필요한 만큼의 피연산자를 스택에서 pop하여 연산하고
+pop A
+pop B
+mul A B 
+
+// 연산 결과를 다시 스택에 삽입한다.
+push (A*B)
+
+// 피연산자를 만나면 스택에 삽입한다.
+push C
+push D
+
+// 연산자를 만나면 필요한 만큼의 피연산자를 스택에서 pop하여 연산하고
+pop C
+pop D
+div C D
+
+// 연산 결과를 다시 스택에 삽입한다.
+push (C/D)
+
+// 연산자를 만나면 필요한 만큼의 피연산자를 스택에서 pop하여 연산하고
+pop (A*B)
+pop (C/D)
+sub (A*B) (C/D)
+
+// 연산 결과를 다시 스택에 삽입한다.
+push ((A*B)-(C/D))
+
+// 수식이 끝나면, 마지막으로 스택을 pop하여 출력한다.
+pop ((A*B)-(C/D))
+```
 출처: https://ryumin13.tistory.com/entry/자료구조-스택의-응용 [진정한 프로그래머가 되길 꿈꾸며..]
 
-### 스택 구현하기
+### 스택을 배열로 구현하기
 
+```java
+import java.util.EmptyStackException;
+public class ArrayStack<E> {
+    private E s[]; //
+    private int top;
+    public ArrayStack() {
+        s = (E[]) new Object[1];
+        top = -1;
+    }
+    public int size() {return top +1;}
+    public boolean isEmpty() {return (top == -1);}
+
+    public E peek() {
+        if (isEmpty()) {
+            throw new EmptyStackException();
+            return s[top];
+        }
+    }
+
+    public void push(E newItem) {
+        if (size() == s.length) {
+            resize(2*s.length);
+        }
+        s[top++] = newItem;
+    }
+
+    public E pop() {
+        if (size() == 0) {
+            throw new EmptyStackException();
+        }
+        E item = s[top];
+        s[top--] = null;
+        if (size() > 0 && size() == s.length/4) {
+            resize(s.length/2);
+        }
+        return item;
+    }
+}
+
+```
+
+### 스택을 연결리스트로 구현하기
+
+```java
+public class Node<E> {
+    private E item;
+    private Node<E> next;
+    public Node(E newItem, Node<E> node) {
+        item = newItem;
+        next = node;
+    }
+
+    public E getItem() {
+        return item;
+    }
+
+    public Node getNext() {
+        return next;
+    }
+
+    public void setItem(E newItem) {
+        item = newItem;
+    }
+
+    public void setNext(Node<E> newNext) {
+        next = newNext;
+    }
+}
+
+```
+
+```java
+import java.util.EmptyStackException;
+public class ListStack <E> {
+    private Node<E> top;
+    private int size;
+    public ListStack() {
+        top = null;
+        size = 0;
+    }
+}
+
+```
 ## 큐
 **FIFO,First-In, First-Out**
 큐는 스택과 마찬가지로 데이터를 일시적으로 쌓아두기 위한 자료구조이다.
@@ -91,7 +237,8 @@ AB*CD/-
 큐의 실생활에성의 활용 예로는 은행 창구나 마트 계산대에 길게 선 대기 손님들의
 모습을 예로 들 수 있다.
 
-[!큐 실생활 예시](/assets/images/)
+![image](https://user-images.githubusercontent.com/61813239/114720623-23104200-9d73-11eb-850a-7bc000d67d17.png)
+
 
 큐에서 데이터를 넣는 작업을 인큐, 데이터를 꺼내는 작업을 디큐라고 보통 얘기한다.
 또한, 데이터를 꺼내는 쪽을 보통 front라고 얘기하고, 데이터를 넣는 쪽을 rear라고 얘기한다.
