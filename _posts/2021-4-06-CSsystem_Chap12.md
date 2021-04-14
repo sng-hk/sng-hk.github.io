@@ -145,7 +145,7 @@ NOTE_
 로 바꿔야 한다.  
 ```  
   
-이제 코드와 이름으로 문자열 cafe를 저장할 수 있다.  
+이제 코드와 이름으로 문자열 café를 저장할 수 있다.  
   
 ```python  
 place = 'caf\u00e9'  
@@ -154,7 +154,7 @@ place = 'caf\N{LATIN SMALL LETTER E WITH ACUTE}`
 place  
 ```  
   
-이진 코드에서는 e를 직접 삽입했다. 그리고 다음과 같이 문자열에 추가하는 것도 가능하다.  
+이전 코드에서는 é를 직접 삽입했다. 그리고 다음과 같이 문자열에 추가하는 것도 가능하다.  
   
 ```python  
 u_umlaut = '\N{LATIN SMALL LETTER U WITH DIAERESIS}`  
@@ -170,7 +170,7 @@ print(len('\U0001f47b'))
 ```  
   
 유니코드 숫자 ID를 알고 있다면, ord()와 chr() 함수를 사용하여 정수 ID로  
-단일 문자의 유니코드 문자열을 빠르게 변환할 수 있다.  
+단일 문자의 유니코드 문자열을 빠르게 변환할 수 있다.
   
 ```python  
 print(chr(232))  
