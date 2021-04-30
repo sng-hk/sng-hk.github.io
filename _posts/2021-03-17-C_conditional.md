@@ -91,7 +91,7 @@ else {
 printf("g = %d", g);
 }
 ```
-  
+
 ## 시험 예상문제
 - **2차 방정식에서 두 근의 해를 구하기**
 두 근이 실수일 경우 (D>0)
@@ -120,3 +120,25 @@ main() {
 }
 
 ```
+
+# switch case 문
+
+## switch case 문 구조와 동작 과정
+```cpp
+switch(판단할 값) {
+	case A:
+		break;
+	case B:
+		break;
+	case C:
+		break;
+	default:
+		break;
+}
+```
+case A/B/C
+판단할 값 = A/B/C 라면
+case A/B/C 아래부터 break를 만날 때 까지의 명령을 실행한 뒤 switch case 문을 빠져나온다.
+판단할 값은 정수형 또는 문자만 가능하다.
+
+##
