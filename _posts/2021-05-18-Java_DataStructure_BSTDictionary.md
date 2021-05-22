@@ -9,7 +9,6 @@ tags : [자료구조]
 
 (설명은 아래에!)
 ```java
-package DictionaryEx;
 
 class Word {
    private String enWord; // key로 사용.
