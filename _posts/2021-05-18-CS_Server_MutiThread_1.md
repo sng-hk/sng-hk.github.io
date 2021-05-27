@@ -1,5 +1,5 @@
 ---
-title: "C#  서버 프로그래밍 - 멀티쓰레드 1"
+title: "C#  서버 프로그래밍 - 멀티쓰레드 | 설명"
 layout: single
 classes: wide
 tags : [C# 서버 프로그래밍]
