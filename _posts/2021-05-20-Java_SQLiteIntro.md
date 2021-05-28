@@ -4,24 +4,23 @@ layout: single
 classes: wide
 tags: [Java]
 ---
-
-
-<a href="https://github.com/sqlitebrowser/sqlitebrowser">SQLite 설치 링크</a>
-
-
-## DB 기본 명령어
-
-## Java DB 기본 명령어
-
-**SELECT)**
-ResultSet rs = stat.executeQuery("SELECT ID,Name FROM User");
-
-**INSERT)**
-prstat = con.prepareStatement("insert into User(ID,Name,Age) values(?,?,?)"); 
-...
-int r = prstat.executeUpdate();
-
-SELECT, INSERT 명령어 차이
+  
+<a href="https://github.com/sqlitebrowser/sqlitebrowser">SQLite 설치 링크</a>  
+  
+  
+## DB 기본 명령어  
+  
+## Java DB 기본 명령어  
+  
+**SELECT)**  
+ResultSet rs = stat.executeQuery("SELECT ID,Name FROM User");  
+  
+**INSERT)**  
+prstat = con.prepareStatement("insert into User(ID,Name,Age) values(?,?,?)");   
+...  
+int r = prstat.executeUpdate();  
+  
+SELECT, INSERT 명령어 차이  
 
 ---
 
