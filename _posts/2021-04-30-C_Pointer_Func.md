@@ -1,5 +1,5 @@
 ---
-title: "C - 포인터_함수"
+title: "C - 포인터, 함수"
 layout: single
 classes: wide
 tags: [C언어]
@@ -262,6 +262,6 @@ oneToNsum(int n1, int n2) {
 	printf("%d",sum);
 }
 void main() {
-	oneToNsum(10);
+	oneToNsum(10, 30);
 }
 ```
