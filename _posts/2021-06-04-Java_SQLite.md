@@ -30,7 +30,6 @@ SELECT, INSERT 명령어 차이
 
 
 ```java
-package testDB00;
 
 import java.awt.BorderLayout;
 import java.awt.event.ActionEvent;

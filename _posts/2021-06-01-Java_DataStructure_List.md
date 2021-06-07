@@ -250,49 +250,49 @@ public void insertFront(E newItem) { // 연결리스트 맨 앞에 새 노드 �
 import java.util.Scanner;
 
 public class Main {
-	public static void main(String[] args) {
-		int i = 0, j = 0, size = 5;
-		int a[][] = new int[size][size];
+   public static void main(String[] args) {
+      int i = 0, j = 0, size = 5;
+      int a[][] = new int[size][size];
 
-		Scanner sc = new Scanner(System.in);
-		int count = 1, tmp_cnt = 1;
+      Scanner sc = new Scanner(System.in);
+      int count = 1, tmp_cnt = 1;
 
-		int right = 0, down = 1, left = 2, up = 3;
-		int direction = 0; // 초기 방향 오른쪽을 초기화
+      int right = 0, down = 1, left = 2, up = 3;
+      int direction = 0; // 초기 방향 오른쪽을 초기화
 
-		while (count <= size * size) {
-			a[i][j] = count++;
-			if (direction == right) {
-				j++;
-				if (j == size - tmp_cnt) {
-					direction = down;
-				}
-			} else if (direction == down) {
-				i++;
-				if (i == size - tmp_cnt) {
-					direction = left;
-				}
-			} else if (direction == left) {
-				j--;
-				if (j == tmp_cnt - 1) {
-					direction = up;
-				}
-			} else if (direction == up) {
-				i--;
-				if (i == tmp_cnt) {
-					tmp_cnt++;
-					direction = right;
-				}
-			}
-		}
+      while (count <= size * size) {
+         a[i][j] = count++;
+         if (direction == right) {
+            j++;
+            if (j == size - tmp_cnt) {
+               direction = down;
+            }
+         } else if (direction == down) {
+            i++;
+            if (i == size - tmp_cnt) {
+               direction = left;
+            }
+         } else if (direction == left) {
+            j--;
+            if (j == tmp_cnt - 1) {
+               direction = up;
+            }
+         } else if (direction == up) {
+            i--;
+            if (i == tmp_cnt) {
+               tmp_cnt++;
+               direction = right;
+            }
+         }
+      }
 
-		for (i = 0; i < size; i++) {
-			for (j = 0; j < size; j++) {
-				System.out.printf("%2d ",a[i][j]);
-			}
-			System.out.println();
-		}
-	}
+      for (i = 0; i < size; i++) {
+         for (j = 0; j < size; j++) {
+            System.out.printf("%2d ",a[i][j]);
+         }
+         System.out.println();
+      }
+   }
 }
 
 ```
@@ -302,30 +302,30 @@ public class Main {
 import java.util.Scanner;
 
 public class Main {
-	public static void main(String[] args) {
+   public static void main(String[] args) {
 
-		int a[][] = new int[5][5];
-		int i, j = 0, cnt = 1, size = 5;
+      int a[][] = new int[5][5];
+      int i, j = 0, cnt = 1, size = 5;
 
-		for (i = 0; i < size; i++) {
-			if (i % 2 == 0) {
-				for (j = 0; j < size; j++) {
-					a[i][j] = cnt++;
-				}
-			} else {
-				for (j = 0; j < size; j++) {
-					a[i][4 - j] = cnt++;
-				}
-			}
-		}
+      for (i = 0; i < size; i++) {
+         if (i % 2 == 0) {
+            for (j = 0; j < size; j++) {
+               a[i][j] = cnt++;
+            }
+         } else {
+            for (j = 0; j < size; j++) {
+               a[i][4 - j] = cnt++;
+            }
+         }
+      }
 
-		for (i = 0; i < size; i++) {
-			for (j = 0; j < size; j++) {
-				System.out.printf("%2d ", a[i][j]);
-			}
-			System.out.println();
-		}
-	}
+      for (i = 0; i < size; i++) {
+         for (j = 0; j < size; j++) {
+            System.out.printf("%2d ", a[i][j]);
+         }
+         System.out.println();
+      }
+   }
 }
 
 ```
